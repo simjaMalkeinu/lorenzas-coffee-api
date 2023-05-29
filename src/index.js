@@ -1,5 +1,5 @@
-const express = require('express')
-const morgan = require('morgan')
+import express from 'express'
+import morgan from 'morgan'
 
 // Initializations
 const app = express()
@@ -12,7 +12,7 @@ app.set('port', process.env.PORT || 3000);
 app.use(morgan('dev'));
 
 // Routes
-app.use('/api/login', require('./routes/LogIn.routes'));
+//app.use('/api/login', require('./routes/LogIn.routes'));
 
 
 // Server is listening 
