@@ -1,13 +1,15 @@
-const express = require("express");
-const router = express.Router();
+import { Router } from "express";
 
-router.get("/", function (req, res) {
-  res.send("log in");
-});
+import {
+  login,
+  logout,
+  ping
+} from "../controllers/Login.controllers.js";
 
+const router = Router();
 
-router.get("/users", function (req, res) {
-  res.send("get all users");
-});
+router.get("/login", login);
+router.get("/logout", logout);
+router.get("/ping", ping);
 
-module.exports = router;
+export default router;
