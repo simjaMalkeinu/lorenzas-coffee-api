@@ -1,6 +1,8 @@
 import express from 'express'
 import morgan from 'morgan'
 
+import loginRoutes from './routes/LogIn.routes.js'
+
 // Initializations
 const app = express()
 
@@ -12,7 +14,7 @@ app.set('port', process.env.PORT || 3000);
 app.use(morgan('dev'));
 
 // Routes
-//app.use('/api/login', require('./routes/LogIn.routes'));
+app.use('/api/', loginRoutes);
 
 
 // Server is listening 
