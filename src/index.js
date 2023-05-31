@@ -2,6 +2,7 @@ import express from 'express'
 import morgan from 'morgan'
 
 import loginRoutes from './routes/LogIn.routes.js'
+import indexRoutes from './routes/index.routes.js'
 
 // Initializations
 const app = express()
@@ -16,6 +17,7 @@ app.use(express.json());
 
 // Routes
 app.use('/api/', loginRoutes);
+app.use('/api/', indexRoutes)
 
 
 // Server is listening 
