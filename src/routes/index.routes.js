@@ -2,8 +2,12 @@ import {Router} from 'express'
 
 const router = Router();
 
-router.get('/deployed', (req, res) => {
-    res.json({messsage: 'deployed'})
+router.get('/', (req, res) => {
+    res.send("API FOR LORENZA'S COFFEE SYSTEM")
+})
+
+router.get('/creator', (req, res) => {
+    res.send("CREATED BY YORK-AM")
 })
 
 

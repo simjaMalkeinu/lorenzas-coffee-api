@@ -19,7 +19,7 @@ app.use(cors())
 
 // Routes
 app.use('/api/', loginRoutes);
-app.use('/api/', indexRoutes)
+app.use('/', indexRoutes)
 
 
 // Server is listening 
