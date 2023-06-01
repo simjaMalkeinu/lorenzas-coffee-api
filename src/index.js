@@ -1,26 +1,9 @@
-import express from 'express'
-import morgan from 'morgan'
-import cors from 'cors'
+import app from './app.js'
 
-import loginRoutes from './routes/LogIn.routes.js'
-import indexRoutes from './routes/index.routes.js'
-
-// Initializations
-const app = express()
+import {PORT} from './config.js'
 
 // Settings
-app.set('port', process.env.PORT || 3000);
-
-
-// Middlewares
-app.use(morgan('dev'));
-app.use(express.json());
-app.use(cors())
-
-// Routes
-app.use('/api/', loginRoutes);
-app.use('/', indexRoutes)
-
+app.set('port', PORT);
 
 // Server is listening 
 app.listen(app.get('port'), () => {
