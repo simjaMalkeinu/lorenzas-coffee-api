@@ -9,11 +9,3 @@ export const poll = createPool({
   database: DB_DATABASE,
   port: DB_PORT
 });
-
-// console.log("db is connected");
-
-// return conn;
-
-//console.log(DB_DATABASE, DB_HOST, DB_PASSWORD, DB_USER);
-
-//export const poll = mysql.createConnection(DATABASE_URL)

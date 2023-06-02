@@ -9,16 +9,17 @@ export const login = async (req, res) => {
       rfc,
     ]);
 
-    if (rows.length <= 0) res.status(404).json({ message: "RFC not found" });
+    if (rows.length <= 0)
+      return res.status(404).json({ message: "RFC not found" });
 
     const dataUser = rows[0];
 
-    dataUser.password !== password
-      ? res.status(404).json({ message: "Password is  incorrect" })
-      : res.json(dataUser);
-      
+    if (dataUser.password !== password)
+      return res.status(404).json({ message: "Password is  incorrect" });
+
+    return res.json(dataUser);
   } catch (error) {
-    res.status(500).json({ message: "Something goes wrong" });
+    return res.status(500).json({ message: "Something goes wrong" });
   }
 };
 
