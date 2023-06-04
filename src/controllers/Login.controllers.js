@@ -5,9 +5,10 @@ export const login = async (req, res) => {
   const { rfc, password } = req.body;
 
   try {
-    const [rows] = await poll.query("SELECT * FROM empleado WHERE rfc = ?", [
-      rfc,
-    ]);
+    const [rows] = await poll.query(
+      "SELECT e.rfc, e.correo, CONCAT(e.nombre, ' ', e.apellido_paterno, ' ', e.apellido_materno) AS nombre, e.password, te.tipo, te.desc FROM empleado e, empleado_tipo et, tiposempleados te WHERE e.rfc = et.rfc_empleado AND et.id_tipo_empleado = te.id_tipo AND e.rfc = ?",
+      [rfc]
+    );
 
     if (rows.length <= 0)
       return res.status(404).json({ message: "RFC not found" });
