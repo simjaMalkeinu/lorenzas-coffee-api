@@ -4,6 +4,7 @@ import cors from 'cors'
 
 import loginRoutes from './routes/LogIn.routes.js'
 import indexRoutes from './routes/index.routes.js'
+import userRoutes from './routes/User.routes.js'
 
 // Initializations
 const app = express()
@@ -15,8 +16,9 @@ app.use(express.json());
 app.use(cors())
 
 // Routes
-app.use('/', indexRoutes)
+app.use('/', indexRoutes);
 app.use('/api/', loginRoutes);
+app.use('/api/', userRoutes);
 
 app.use((req, res, next) => {
     res.status(404).json({
