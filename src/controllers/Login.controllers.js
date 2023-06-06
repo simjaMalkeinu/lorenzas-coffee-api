@@ -11,16 +11,23 @@ export const login = async (req, res) => {
     );
 
     if (rows.length <= 0)
-      return res.status(404).json({ message: "RFC not found" });
+      return res
+        .status(404)
+        .json({ status: "denied", message: "RFC or Password is  incorrect" });
 
     const dataUser = rows[0];
 
     if (dataUser.password !== password)
-      return res.status(404).json({ message: "Password is  incorrect" });
+      return res
+        .status(404)
+        .json({ status: "denied", message: "RFC or Password is  incorrect" });
 
-    return res.json(dataUser);
+    return res.json({ status: "accepted", data: dataUser });
+
   } catch (error) {
-    return res.status(500).json({ message: "Something goes wrong" });
+    return res
+      .status(500)
+      .json({ status: "error", message: "Something goes wrong" });
   }
 };
 
