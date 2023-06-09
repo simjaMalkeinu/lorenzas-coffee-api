@@ -1,5 +1,7 @@
 import { poll } from "../db.js";
 
+import User from "../models/user.js";
+
 export const users = async (req, res) => {
   try {
     const [rows] = await poll.query(
@@ -33,20 +35,16 @@ export const user = async (req, res) => {
 };
 
 export const newUser = async (req, res) => {
-  const {
-    rfc,
-    correo,
-    nombre,
-    apellido_paterno,
-    apellido_materno,
-    password,
-    tipo,
-  } = req.body;
+  const { password } = req.body;
+
+  const user = new User(req.body);
+
+  user.password = await user.encryptPassword(password);
 
   try {
     const [result] = await poll.query(
       "INSERT INTO `empleado` (`rfc`, `correo`, `password`, `nombre`, `apellido_paterno`, `apellido_materno`) VALUES (?,?,?,?,?,?)",
-      [rfc, correo, password, nombre, apellido_paterno, apellido_materno]
+      [user.rfc, user.correo, user.password, user.nombre, user.apellido_paterno, user.apellido_materno]
     );
 
     if (result.affectedRows !== 1)
@@ -54,7 +52,7 @@ export const newUser = async (req, res) => {
 
     const [result2] = await poll.query(
       "INSERT INTO `empleado_tipo` (`rfc_empleado`, `id_tipo_empleado`) VALUES (?,?)",
-      [rfc, tipo]
+      [user.rfc, user.tipo]
     );
 
     if (result2.affectedRows !== 1)
@@ -64,4 +62,5 @@ export const newUser = async (req, res) => {
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }
+
 };

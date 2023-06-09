@@ -6,7 +6,7 @@ const router = Router();
 
 router.get("/users", users);
 router.get("/user", user);
-router.post('/user', newUser)
+router.post('/newUser', newUser)
 
 
 export default router;
