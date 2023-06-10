@@ -1,7 +1,7 @@
 //import database connection
 import { poll } from "../db.js";
 
-import User from "../models/user.js";
+import User from "../models/User.js";
 
 export const login = async (req, res) => {
   const { rfc, password } = req.body;

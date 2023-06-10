@@ -1,6 +1,6 @@
 import { poll } from "../db.js";
 
-import User from "../models/user.js";
+import User from "../models/User.js";
 
 export const users = async (req, res) => {
   try {
