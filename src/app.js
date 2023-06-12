@@ -5,7 +5,7 @@ import cors from 'cors'
 import loginRoutes from './routes/LogIn.routes.js'
 import indexRoutes from './routes/index.routes.js'
 import userRoutes from './routes/User.routes.js'
-import products from './routes/products.routes.js'
+import products from './routes/Products.routes.js'
 import insumos from './routes/Insumos.routes.js'
 
 // Initializations
