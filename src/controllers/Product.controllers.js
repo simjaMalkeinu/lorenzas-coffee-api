@@ -88,8 +88,12 @@ export const delteProduct = async (req, res) => {
   const { id } = req.body;
 
   try {
+    await poll.query("DELETE FROM producto_insumos WHERE id_producto = ?", [
+      id,
+    ]);
+
     const [rows] = await poll.query(
-      "DELETE FROM producto_insumos WHERE id_producto = ?",
+      "DELETE FROM productos WHERE id_producto = ?",
       [id]
     );
 
