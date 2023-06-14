@@ -1,6 +1,13 @@
 import express from 'express'
 import morgan from 'morgan'
 import cors from 'cors'
+import path from 'path'
+
+
+import { fileURLToPath } from 'url'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 import loginRoutes from './routes/LogIn.routes.js'
 import indexRoutes from './routes/index.routes.js'
@@ -24,6 +31,11 @@ app.use('/api/', userRoutes);
 app.use('/api/dashboard/', products);
 app.use('/api/dashboard/', insumos);
 
+
+// Static Files
+app.use(express.static(path.join(__dirname, 'public')));
+
+console.log(path.join(__dirname, 'public'))
 
 app.use((req, res, next) => {
     res.status(404).json({

@@ -1,0 +1,514 @@
+<section id="descargas" class="mb-5">
+  <h1><span class="badge bg-secondary">DESCARGAS</span></h1>
+  <div class="row gap-3 justify-content-center">
+    <div class="card" style="width: 18rem;">
+      <img src="./imgs/frontend.webp" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h4 class="card-title"><span class="badge bg-info">FRONTEND</span></h4>
+        <p class="card-text text-wrap">Sistema a utilizar Lorenza's Coffee para
+          la parte del FRONTEND, esta parte interactua con el usuario</p>
+        <a
+          href="https://github.com/simjaMalkeinu/Lorenzas-Coffee-UI.git"
+          class="btn btn-primary"
+          target="_blank"
+        >Ir a github <i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <img src="./imgs/backend.webp" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h4 class="card-title"><span class="badge bg-info">BACKEND</span></h4>
+        <p class="card-text">Sistema a utilizar Lorenza's Coffee para la parte
+          del BACKEND, esta parte interactua con el FRONTEND</p>
+        <a
+          href="https://github.com/simjaMalkeinu/lorenzas-coffee-api.git"
+          class="btn btn-primary"
+          target="_blank"
+        >Ir a github <i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ConfiguracionBackend" class="mb-5">
+  <h1><span class="badge bg-secondary">BACKEND CONFIGURACION</span></h1>
+  <div class="container">
+    <h5><span class="badge bg-warning">Configuracion</span></h5>
+    <p class="card-text">
+      dentro de la consola de nuestro Proyecto tecleamos el siguiente comando:
+    </p>
+    <pre>
+      <code>
+        npm instal
+      </code>
+    </pre>
+    <p class="card-text">
+      Se instalaran todas las dependencias asi como las de desarrollo
+    </p>
+
+    <p class="card-text">
+      Despues de descargar el proyecto, debes crear un archivo nuevo en la ruta
+      raiz del proyecto:
+    </p>
+
+    <p class="card-text">
+      El archivo se debe llamar .env.development
+    </p>
+    <pre>
+      <code>
+        |--> Proyecto 
+            |-->src 
+                  |-->public 
+                  |-->controllers 
+                  |-->models
+            |--> <strong>.env.development</strong>
+            |-->package-lock.json
+            |-->package.json
+      </code>
+    </pre>
+    <p class="card-text">
+      Dentro del archivo que acabamos de crear ponemos lo siguiente: cambiamos los valores por los nuestros
+    </p>
+    <pre>
+      <code>
+        PORT=<strong>"PUERTO DEL SISTEMA"</strong>
+        DB_HOST=<strong>"HOST"</strong>
+        DB_PORT=<strong>"PUERTO"</strong>
+        DB_USER=<strong>"USUARIO BASE DE DATOS"</strong>
+        DB_PASSWORD=<strong>"PASSWORD BASE DE DATOS"</strong>
+        DB_DATABASE=<strong>"NOMBRE BASE DE DATOS"</strong>
+      </code>
+    </pre>
+
+    <h5><span class="badge bg-success">Iniciar Proyecto</span></h5>
+    <p class="card-text">
+      Despues para iniciar el proyect en consola tecleamos el siguiente comando
+    </p>
+    <pre>
+      <code>
+        npm run dev
+      </code>
+    </pre>
+  </div>
+</section>
+
+<section id="ConfiguracionFrontend" class="mb-5">
+      <h1><span class="badge bg-secondary">FRONTEND</span></h1>
+
+      <p class="card-text">
+            Despues de descargar el proyecto, necesitamos tener instalado un programa que nos haga como servidor, puede ser XAMPP o MAMP o el que tu gustes
+            debe de contener APACHE y MYSQL o MARIADB
+      </p>
+      <p class="card-text">
+            Nos dirigimos a la carpete <strong>htdos</strong> y ponemos el proyecto en esa ruta
+      </p>
+      <pre>
+      <code>
+        |--> htdocs 
+            |-->proyecto 2 
+                  |-->public 
+                  |-->controllers 
+                  |-->models
+            |--> <strong>Lorenzas-Coffee-UI</strong>
+      </code>
+    </pre>
+
+      <p class="card-text">
+            En el Navegador tecleamos lo siguiente
+      </p>
+
+      <pre>
+        <code>
+          http://localhost/Lorenzas-Coffee-UI/
+        </code>
+      </pre>
+
+      <p class="card-text">
+            Nos debe de aparecer el sistema ya en linea
+      </p>
+
+      <div class="col-md-6 mx-auto">
+        <img src="./imgs/inicio.png" alt="inicio" srcset="" width="100%">
+      </div>
+
+</section>
+
+<section id="apiventas" class="mb-5">
+  <h1><span class="badge bg-secondary">API VENTAS</span></h1>
+  <h5><span class="badge bg-success">PETICIONES GET</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/ventas
+    </code>
+  </pre>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/venta
+    </code>
+  </pre>
+  <p class="card-text">
+
+  </p>
+  <h5><span class="badge bg-info">PETICIONES POST</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/newVenta
+    </code>
+  </pre>
+  <h5><span class="badge bg-warning">PETICIONES PUT</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/venta/:id
+    </code>
+  </pre>
+  <h5><span class="badge bg-danger">PETICIONES DELETE</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/venta/:id
+    </code>
+  </pre>
+  <p class="card-text">
+
+  </p>
+</section>
+
+<section id="apiproductos" class="mb-5">
+  <h1><span class="badge bg-secondary">API PRODUCTOS</span></h1>
+  <h5><span class="badge bg-success">PETICIONES GET</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/products
+    </code>
+  </pre>
+  <pre class="respuesta">
+    <code>
+      respuesta:
+        [
+            {
+                "id_producto": 1,
+                "nombre": "Cafe americano",
+                "cantidad": 15,
+                "caducidad": "2023-06-30T05:00:00.000Z",
+                "costo": 15,
+                "precio_venta": 35,
+                "unidad": "tazas",
+                "canmin": 0
+            },
+            {
+                "id_producto": 2,
+                "nombre": "Cafe con leche",
+                "cantidad": 15,
+                "caducidad": "2023-06-30T05:00:00.000Z",
+                "costo": 25,
+                "precio_venta": 40,
+                "unidad": "tazas",
+                "canmin": 2
+            },
+            
+        ]
+    </code>
+  </pre>
+  <h5><span class="badge bg-info">PETICIONES POST</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/product/:id
+    </code>
+  </pre>
+  <pre class="respuesta">
+    <code>
+      respuesta:
+        {
+            "nombre": "Cafe americano",
+            "cantidad": 15,
+            "caducidad": "2023-06-30T05:00:00.000Z",
+            "canmin": 0,
+            "costo": 15,
+            "precio_venta": 35,
+            "unidad": "tazas",
+            "insumos": [
+                {
+                    "id_insumo": 3,
+                    "cantidad": 0.2
+                },
+                {
+                    "id_insumo": 2,
+                    "cantidad": 0.05
+                },
+                {
+                    "id_insumo": 4,
+                    "cantidad": 0.01
+                }
+            ]
+        }
+    </code>
+  </pre>
+  <h5><span class="badge bg-warning">PETICIONES PUT</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/product/:id
+    </code>
+  </pre>
+  <pre class="body">
+    <code>
+      body:
+        {
+            "nombre": "Cafe americano",
+            "cantidad": 15,
+            "caducidad": "2023-06-30",
+            "canmin": 0,
+            "costo": 15,
+            "precio_venta": 35,
+            "unidad": "tazas",
+            "insumos": [
+                {
+                    "id_insumo": 3,
+                    "cantidad": 0.2
+                },
+                {
+                    "id_insumo": 2,
+                    "cantidad": 0.05
+                },
+                {
+                    "id_insumo": 4,
+                    "cantidad": 0.01
+                }
+            ]
+        }
+    </code>
+  </pre>
+  <h5><span class="badge bg-danger">PETICIONES DELETE</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/product/:id
+    </code>
+  </pre>
+
+  <pre class="respuesta">
+    <code>
+      respuesta 
+        {
+          status: ""
+          message: ""
+        }
+    </code>
+  </pre>
+</section>
+
+<section id="apiinsumos" class="mb-5">
+  <h1><span class="badge bg-secondary">API INSUMOS</span></h1>
+  <h5><span class="badge bg-success">PETICIONES GET</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/insumos
+    </code>
+  </pre>
+  <pre class="respuesta">
+    <code>
+      respuesta
+        [
+            {
+                "id_insumo": 1,
+                "nombre": "cafe",
+                "costo": 100,
+                "cantidad": 30,
+                "caducidad": "2023-06-30T05:00:00.000Z",
+                "unidad": "capsulas",
+                "canmin": 20
+            },
+            {
+                "id_insumo": 2,
+                "nombre": "leche",
+                "costo": 100,
+                "cantidad": 10,
+                "caducidad": "2023-06-30T05:00:00.000Z",
+                "unidad": "capsulas",
+                "canmin": 2
+            },
+        ]
+    </code>
+  </pre>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/insumo/:id
+    </code>
+  </pre>
+  <pre class="respuesta">
+    <code>
+      respuesta: 
+        {
+            "id_insumo": 2,
+            "nombre": "leche",
+            "costo": 100,
+            "cantidad": 10,
+            "caducidad": "2023-06-30T05:00:00.000Z",
+            "unidad": "capsulas",
+            "canmin": 2
+        }
+    </code>
+  </pre>
+  <h5><span class="badge bg-info">PETICIONES POST</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/insumo
+    </code>
+  </pre>
+  <pre class="body">
+    <code>
+      body: 
+        {
+            "id_insumo": 2,
+            "nombre": "leche",
+            "costo": 100,
+            "cantidad": 10,
+            "caducidad": "2023-06-30",
+            "unidad": "capsulas",
+            "canmin": 2
+        }
+    </code>
+  </pre>
+  <h5><span class="badge bg-warning">PETICIONES PUT</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/insumo/:id
+    </code>
+  </pre>
+  <pre class="body">
+    <code>
+      body: 
+        {
+            "id_insumo": 2,
+            "nombre": "leche",
+            "costo": 100,
+            "cantidad": 10,
+            "caducidad": "2023-06-30",
+            "unidad": "capsulas",
+            "canmin": 2
+        }
+    </code>
+  </pre>
+  <h5><span class="badge bg-danger">PETICIONES DELETE</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/insumo/:id
+    </code>
+  </pre>
+  <pre class="respuesta">
+    <code>
+      respuesta 
+        {
+          status: ""
+          message: ""
+        }
+    </code>
+  </pre>
+</section>
+
+<section id="apireportes" class="mb-5">
+  <h1><span class="badge bg-secondary">API REPORTES</span></h1>
+  <h5><span class="badge bg-success">PETICIONES GET</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/
+    </code>
+  </pre>
+  <h5><span class="badge bg-info">PETICIONES POST</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/
+    </code>
+  </pre>
+  <h5><span class="badge bg-warning">PETICIONES PUT</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/
+    </code>
+  </pre>
+  <h5><span class="badge bg-danger">PETICIONES DELETE</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/
+    </code>
+  </pre>
+</section>
+
+<section id="apiordenescompra" class="mb-5">
+  <h1><span class="badge bg-secondary">API ORDENES DE COMPRA</span></h1>
+  <h5><span class="badge bg-success">PETICIONES GET</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/
+    </code>
+  </pre>
+  <h5><span class="badge bg-info">PETICIONES POST</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/
+    </code>
+  </pre>
+  <h5><span class="badge bg-warning">PETICIONES PUT</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/
+    </code>
+  </pre>
+  <h5><span class="badge bg-danger">PETICIONES DELETE</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/
+    </code>
+  </pre>
+</section>
+
+<section id="apiusuarios" class="mb-5">
+  <h1><span class="badge bg-secondary">API USUARIOS</span></h1>
+  <h5><span class="badge bg-success">PETICIONES GET</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/
+    </code>
+  </pre>
+  <h5><span class="badge bg-info">PETICIONES POST</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/
+    </code>
+  </pre>
+  <h5><span class="badge bg-warning">PETICIONES PUT</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/
+    </code>
+  </pre>
+  <h5><span class="badge bg-danger">PETICIONES DELETE</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/
+    </code>
+  </pre>
+</section>
