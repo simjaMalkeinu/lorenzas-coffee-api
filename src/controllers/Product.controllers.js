@@ -60,7 +60,7 @@ export const addProduct = async (req, res) => {
         producto.caducidad,
         producto.unidad,
         producto.precio_venta,
-        producto.canmin
+        producto.canmin,
       ]
     );
 
@@ -119,17 +119,17 @@ export const updatedProduct = async (req, res) => {
   const {
     nombre,
     costo,
-    estado,
     cantidad,
     caducidad,
     unidad,
     precio_venta,
     insumos,
+    canmin,
   } = req.body;
   try {
     const [result] = await poll.query(
-      "UPDATE productos SET nombre = IFNULL(?, nombre), costo = IFNULL(?, costo), estado = IFNULL(?, estado), cantidad = IFNULL(?, cantidad), caducidad = IFNULL(?, caducidad), unidad = IFNULL(?, unidad), precio_venta = IFNULL(?, precio_venta) WHERE id_producto = ?",
-      [nombre, costo, estado, cantidad, caducidad, unidad, precio_venta, id]
+      "UPDATE productos SET nombre = IFNULL(?, nombre), costo = IFNULL(?, costo), cantidad = IFNULL(?, cantidad), caducidad = IFNULL(?, caducidad), unidad = IFNULL(?, unidad), precio_venta = IFNULL(?, precio_venta), canmin = IFNULL(?, canmin) WHERE id_producto = ?",
+      [nombre, costo, cantidad, caducidad, unidad, precio_venta, canmin, id]
     );
 
     if (result.affectedRows === 0)
