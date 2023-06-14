@@ -2,7 +2,7 @@ class Insumo{
     id_insumo = '';
     nombre = '';
     costo = '';
-    estado = '';
+    canmin = '';
     cantidad = '';
     caducidad = '';
     unidad = '';
@@ -11,7 +11,7 @@ class Insumo{
         this.id_insumo = insumo.id_insumo;
         this.nombre = insumo.nombre;
         this.costo = insumo.costo;
-        this.estado = insumo.estado;
+        this.canmin = insumo.canmin;
         this.cantidad = insumo.cantidad;
         this.caducidad = insumo.caducidad;
         this.unidad = insumo.unidad;
