@@ -28,7 +28,8 @@ export const getProduct = async (req, res) => {
         .json({ status: 404, message: "Product not found" });
 
     const [insumos] = await poll.query(
-      "SELECT i.id_insumo, i.nombre, i.estado, i.caducidad, i.unidad, pi.cantidad FROM insumos i, productos p, producto_insumos pi WHERE p.id_producto = pi.id_producto AND i.id_insumo = pi.id_insumo AND p.id_producto = 2"
+      "SELECT i.id_insumo, i.nombre, i.estado, i.caducidad, i.unidad, pi.cantidad FROM insumos i, productos p, producto_insumos pi WHERE p.id_producto = pi.id_producto AND i.id_insumo = pi.id_insumo AND p.id_producto = ?",
+      [id]
     );
 
     const producto = new Product(rows[0]);
