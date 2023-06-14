@@ -1,5 +1,5 @@
 <section id="descargas" class="mb-5">
-  <h1><span class="badge bg-secondary">DESCARGAS</span></h1>
+  <h1><span class="badge bg-dark">DESCARGAS</span></h1>
   <div class="row gap-3 justify-content-center">
     <div class="card" style="width: 18rem;">
       <img src="./imgs/frontend.webp" class="card-img-top" alt="..." />
@@ -7,11 +7,8 @@
         <h4 class="card-title"><span class="badge bg-info">FRONTEND</span></h4>
         <p class="card-text text-wrap">Sistema a utilizar Lorenza's Coffee para
           la parte del FRONTEND, esta parte interactua con el usuario</p>
-        <a
-          href="https://github.com/simjaMalkeinu/Lorenzas-Coffee-UI.git"
-          class="btn btn-primary"
-          target="_blank"
-        >Ir a github <i class="fa-brands fa-github"></i></a>
+        <a href="https://github.com/simjaMalkeinu/Lorenzas-Coffee-UI.git" class="btn btn-primary" target="_blank">Ir a
+          github <i class="fa-brands fa-github"></i></a>
       </div>
     </div>
     <div class="card" style="width: 18rem;">
@@ -20,18 +17,15 @@
         <h4 class="card-title"><span class="badge bg-info">BACKEND</span></h4>
         <p class="card-text">Sistema a utilizar Lorenza's Coffee para la parte
           del BACKEND, esta parte interactua con el FRONTEND</p>
-        <a
-          href="https://github.com/simjaMalkeinu/lorenzas-coffee-api.git"
-          class="btn btn-primary"
-          target="_blank"
-        >Ir a github <i class="fa-brands fa-github"></i></a>
+        <a href="https://github.com/simjaMalkeinu/lorenzas-coffee-api.git" class="btn btn-primary" target="_blank">Ir a
+          github <i class="fa-brands fa-github"></i></a>
       </div>
     </div>
   </div>
 </section>
 
 <section id="ConfiguracionBackend" class="mb-5">
-  <h1><span class="badge bg-secondary">BACKEND CONFIGURACION</span></h1>
+  <h1><span class="badge bg-dark">BACKEND CONFIGURACION</span></h1>
   <div class="container">
     <h5><span class="badge bg-warning">Configuracion</span></h5>
     <p class="card-text">
@@ -93,16 +87,17 @@
 </section>
 
 <section id="ConfiguracionFrontend" class="mb-5">
-      <h1><span class="badge bg-secondary">FRONTEND</span></h1>
+  <h1><span class="badge bg-dark">FRONTEND</span></h1>
 
-      <p class="card-text">
-            Despues de descargar el proyecto, necesitamos tener instalado un programa que nos haga como servidor, puede ser XAMPP o MAMP o el que tu gustes
-            debe de contener APACHE y MYSQL o MARIADB
-      </p>
-      <p class="card-text">
-            Nos dirigimos a la carpete <strong>htdos</strong> y ponemos el proyecto en esa ruta
-      </p>
-      <pre>
+  <p class="card-text">
+    Despues de descargar el proyecto, necesitamos tener instalado un programa que nos haga como servidor, puede ser
+    XAMPP o MAMP o el que tu gustes
+    debe de contener APACHE y MYSQL o MARIADB
+  </p>
+  <p class="card-text">
+    Nos dirigimos a la carpete <strong>htdos</strong> y ponemos el proyecto en esa ruta
+  </p>
+  <pre>
       <code>
         |--> htdocs 
             |-->proyecto 2 
@@ -113,28 +108,28 @@
       </code>
     </pre>
 
-      <p class="card-text">
-            En el Navegador tecleamos lo siguiente
-      </p>
+  <p class="card-text">
+    En el Navegador tecleamos lo siguiente
+  </p>
 
-      <pre>
+  <pre>
         <code>
           http://localhost/Lorenzas-Coffee-UI/
         </code>
       </pre>
 
-      <p class="card-text">
-            Nos debe de aparecer el sistema ya en linea
-      </p>
+  <p class="card-text">
+    Nos debe de aparecer el sistema ya en linea
+  </p>
 
-      <div class="col-md-6 mx-auto">
-        <img src="./imgs/inicio.png" alt="inicio" srcset="" width="100%">
-      </div>
+  <div class="col-md-6 mx-auto">
+    <img src="./imgs/inicio.png" alt="inicio" srcset="" width="100%">
+  </div>
 
 </section>
 
 <section id="apiventas" class="mb-5">
-  <h1><span class="badge bg-secondary">API VENTAS</span></h1>
+  <h1><span class="badge bg-dark">API VENTAS</span></h1>
   <h5><span class="badge bg-success">PETICIONES GET</span></h5>
   <pre>
     <code>
@@ -142,27 +137,128 @@
         http://localhost:3000/api/dashboard/ventas
     </code>
   </pre>
+  <pre class="respuesta">
+    <code>
+      respuesta:
+        [
+          {
+              "idventa": 1,
+              "id_registro": 1,
+              "fecha": "2023-05-29T05:00:00.000Z",
+              "rfc_empleado": "PERSEVALE",
+              "operacion": "venta"
+          },
+          {
+              "idventa": 2,
+              "id_registro": 3,
+              "fecha": "2023-05-29T05:00:00.000Z",
+              "rfc_empleado": "PERSEVALE",
+              "operacion": "venta"
+          }
+        ]
+
+    </code>
+  </pre>
+
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/venta/<strong>:id</strong>
+    </code>
+  </pre>
+
+  <pre class="respuesta">
+    <code>
+      respuesta
+        {
+            "idventa": 1,
+            "fecha": "2023-05-29T00:00:00.000Z",
+            "id_registro": 1,
+            "operacion": "venta",
+            "productos": [
+                {
+                    "id_producto": 3,
+                    "nombre": "Paquete de donas",
+                    "costo": 35,
+                    "cantidad": 1
+                }
+            ],
+            "total": 75
+        }
+
+    </code>
+  </pre>
+  <h5><span class="badge bg-info">PETICIONES POST</span></h5>
   <pre>
     <code>
       ruta:
         http://localhost:3000/api/dashboard/venta
     </code>
   </pre>
-  <p class="card-text">
 
-  </p>
-  <h5><span class="badge bg-info">PETICIONES POST</span></h5>
-  <pre>
+  <pre class="body">
     <code>
-      ruta:
-        http://localhost:3000/api/dashboard/newVenta
+      body:
+        {
+            "rfc_usuario": "YORKACJI46Y79",
+            "id_operacion" : 2,
+            "fecha": "2023-06-14",
+            "total": 80,
+            "productos": [
+                {
+                    "id": 1,
+                    "cantidad": 2
+                },
+                {
+                    "id": 2,
+                    "cantidad": 2
+                }
+
+            ]
+        }
+
     </code>
   </pre>
+
+  <pre class="respuesta">
+      <code>
+        respuesta
+          {
+              "status": "created",
+              "message": "La venta se registro con exito, con el id -> 4 y el registro -> 6"
+          }
+  
+      </code>
+    </pre>
   <h5><span class="badge bg-warning">PETICIONES PUT</span></h5>
   <pre>
     <code>
       ruta:
         http://localhost:3000/api/dashboard/venta/:id
+    </code>
+  </pre>
+
+  <pre class="body">
+    <code>
+      body
+        {
+            "rfc_usuario": "ALFOSASA46A79",
+            "id_registro": 1,
+            "fecha": "2023-06-15",
+            "total": 120,
+            "productos": [
+                {
+                    "id": 1,
+                    "cantidad": 3
+                },
+                {
+                    "id": 2,
+                    "cantidad": 3
+                }
+
+            ]
+        }
+
     </code>
   </pre>
   <h5><span class="badge bg-danger">PETICIONES DELETE</span></h5>
@@ -172,13 +268,24 @@
         http://localhost:3000/api/dashboard/venta/:id
     </code>
   </pre>
+
+  <pre class="body">
+    <code>
+      body:
+        {
+            "id" : 3,
+            "id_registro": 5
+        }
+
+    </code>
+  </pre>
   <p class="card-text">
 
   </p>
 </section>
 
 <section id="apiproductos" class="mb-5">
-  <h1><span class="badge bg-secondary">API PRODUCTOS</span></h1>
+  <h1><span class="badge bg-dark">API PRODUCTOS</span></h1>
   <h5><span class="badge bg-success">PETICIONES GET</span></h5>
   <pre>
     <code>
@@ -304,7 +411,7 @@
 </section>
 
 <section id="apiinsumos" class="mb-5">
-  <h1><span class="badge bg-secondary">API INSUMOS</span></h1>
+  <h1><span class="badge bg-dark">API INSUMOS</span></h1>
   <h5><span class="badge bg-success">PETICIONES GET</span></h5>
   <pre>
     <code>
@@ -418,7 +525,7 @@
 </section>
 
 <section id="apireportes" class="mb-5">
-  <h1><span class="badge bg-secondary">API REPORTES</span></h1>
+  <h1><span class="badge bg-dark">API REPORTES</span></h1>
   <h5><span class="badge bg-success">PETICIONES GET</span></h5>
   <pre>
     <code>
@@ -450,7 +557,7 @@
 </section>
 
 <section id="apiordenescompra" class="mb-5">
-  <h1><span class="badge bg-secondary">API ORDENES DE COMPRA</span></h1>
+  <h1><span class="badge bg-dark">API ORDENES DE COMPRA</span></h1>
   <h5><span class="badge bg-success">PETICIONES GET</span></h5>
   <pre>
     <code>
@@ -482,7 +589,7 @@
 </section>
 
 <section id="apiusuarios" class="mb-5">
-  <h1><span class="badge bg-secondary">API USUARIOS</span></h1>
+  <h1><span class="badge bg-dark">API USUARIOS</span></h1>
   <h5><span class="badge bg-success">PETICIONES GET</span></h5>
   <pre>
     <code>
