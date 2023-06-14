@@ -52,15 +52,15 @@ export const addProduct = async (req, res) => {
 
   try {
     const [rows] = await poll.query(
-      "INSERT INTO productos (nombre, costo, estado, cantidad, caducidad, unidad, precio_venta) VALUES (?,?,?,?,?,?,?)",
+      "INSERT INTO productos (nombre, costo, cantidad, caducidad, unidad, precio_venta, canmin) VALUES (?,?,?,?,?,?,?)",
       [
         producto.nombre,
         producto.costo,
-        producto.estado,
         producto.cantidad,
         producto.caducidad,
         producto.unidad,
         producto.precio_venta,
+        producto.canmin
       ]
     );
 

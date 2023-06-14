@@ -2,7 +2,7 @@ class Product{
     nombre ='';
     cantidad = 0;
     caducidad ='';
-    estado = '';
+    canmin = '';
     costo = '';
     precio_venta = '';
     unidad = '';
@@ -12,7 +12,7 @@ class Product{
         this.nombre = producto.nombre;
         this.cantidad = producto.cantidad;
         this.caducidad = producto.caducidad;
-        this.estado = producto.estado;
+        this.canmin = producto.canmin;
         this.costo = producto.costo;
         this.precio_venta = producto.precio_venta;
         this.unidad = producto.unidad;
