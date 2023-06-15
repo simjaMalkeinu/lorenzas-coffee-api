@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body{
   font-family: 'Signika Negative', sans-serif;
 }
@@ -32,6 +36,7 @@ code {
 pre {
   overflow: scroll;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .scroll::-webkit-scrollbar,
@@ -60,7 +65,7 @@ pre.respuesta::-webkit-scrollbar {
 
 pre.respuesta::-webkit-scrollbar-thumb {
   width: 8px;
-  background-color: white;
+  background-color: #2dc5c5;
   border-radius: 100vw;
 }
 

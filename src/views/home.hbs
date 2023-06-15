@@ -596,28 +596,37 @@
   <pre>
     <code>
       ruta:
-        http://localhost:3000/api/dashboard/
+        http://localhost:3000/api/dashboard/ordenes
+    </code>
+  </pre>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/orden<strong>/:id</strong>
     </code>
   </pre>
   <h5><span class="badge bg-info">PETICIONES POST</span></h5>
   <pre>
     <code>
+      <strong>PENDIENTE</strong>
       ruta:
-        http://localhost:3000/api/dashboard/
+        http://localhost:3000/api/dashboard/orden
     </code>
   </pre>
   <h5><span class="badge bg-warning">PETICIONES PUT</span></h5>
   <pre>
     <code>
+      <strong>PENDIENTE</strong>
       ruta:
-        http://localhost:3000/api/dashboard/
+        http://localhost:3000/api/dashboard/orden<strong>/:id</strong>
     </code>
   </pre>
   <h5><span class="badge bg-danger">PETICIONES DELETE</span></h5>
   <pre>
     <code>
+      <strong>PENDIENTE</strong>
       ruta:
-        http://localhost:3000/api/dashboard/
+        http://localhost:3000/api/dashboard/orden
     </code>
   </pre>
 </section>
@@ -628,28 +637,90 @@
   <pre>
     <code>
       ruta:
-        http://localhost:3000/api/dashboard/
+        http://localhost:3000/api/dashboard/users
+    </code>
+  </pre>
+
+  <pre class="respuesta">
+    <code>
+      respuesta:
+        [
+            {
+                "rfc": "YORKACJI46Y79",
+                "correo": "yorkam@lorenzascoffee.com",
+                "nombre": "York-am Acua Jimenez",
+                "password": "$2a$10$UaFW87pugBLIIEVLXsz/9.thz8vbBht/NNwFqYkxcf9CL91.UZH1W",
+                "tipo": "administrador",
+                "desc": "puede acceder a todas las funciones del sistema"
+            },
+            {
+                "rfc": "MELIBUVA46M79",
+                "correo": "melissa@lorenzascoffee.com",
+                "nombre": "Melissa Mónica Bustamante Valderrabano",
+                "password": "$2a$10$c6p3wPHfbwZ.MN26ZomsmOC3u7uUgd4.ZPz9y58WPP5HPvXniIjGS",
+                "tipo": "administrador",
+                "desc": "puede acceder a todas las funciones del sistema"
+            },
+        ]
+    </code>
+  </pre>
+
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/user<strong>/:rfc</strong>
+    </code>
+  </pre>
+
+  <pre class="respuesta">
+    <code>
+      respuesta:
+        {
+            "rfc": "YORKACJI46Y79",
+            "correo": "yorkam@lorenzascoffee.com",
+            "nombre": "York-am Acua Jimenez",
+            "password": "$2a$10$UaFW87pugBLIIEVLXsz/9.thz8vbBht/NNwFqYkxcf9CL91.UZH1W",
+            "tipo": "administrador",
+            "desc": "puede acceder a todas las funciones del sistema"
+        }
     </code>
   </pre>
   <h5><span class="badge bg-info">PETICIONES POST</span></h5>
   <pre>
     <code>
       ruta:
-        http://localhost:3000/api/dashboard/
+        http://localhost:3000/api/dashboard/user
+    </code>
+  </pre>
+
+  <pre class="body">
+    <code>
+      body:
+        {
+            "rfc": "ALFOSASA46A79",
+            "correo": "alfonso@lorenzascoffee.com",
+            "nombre": "Alfonso",
+            "apellido_paterno": "Salgado",
+            "apellido_materno": "Sandoval",
+            "password": "admin45678",
+            "tipo": 1
+        }
     </code>
   </pre>
   <h5><span class="badge bg-warning">PETICIONES PUT</span></h5>
   <pre>
     <code>
+      <strong>PENDIENTE</strong>
       ruta:
-        http://localhost:3000/api/dashboard/
+        http://localhost:3000/api/dashboard/user<strong>/:rfc</strong>
     </code>
   </pre>
   <h5><span class="badge bg-danger">PETICIONES DELETE</span></h5>
   <pre>
     <code>
+      <strong>PENDIENTE</strong>
       ruta:
-        http://localhost:3000/api/dashboard/
+        http://localhost:3000/api/dashboard/user<strong>/:rfc</strong>
     </code>
   </pre>
 </section>
