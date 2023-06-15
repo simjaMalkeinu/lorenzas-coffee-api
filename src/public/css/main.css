@@ -49,7 +49,6 @@ pre::-webkit-scrollbar {
 pre::-webkit-scrollbar-thumb {
   width: 8px;
   background-color: #2c3e50;
-  border-radius: 100vw;
 }
 
 
@@ -66,7 +65,6 @@ pre.respuesta::-webkit-scrollbar {
 pre.respuesta::-webkit-scrollbar-thumb {
   width: 8px;
   background-color: #2dc5c5;
-  border-radius: 100vw;
 }
 
 .navigation {
