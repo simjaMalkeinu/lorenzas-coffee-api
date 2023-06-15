@@ -21,7 +21,7 @@ app.use(cors())
 // Routes
 app.use('/', indexRoutes);
 app.use('/api/', loginRoutes);
-app.use('/api/', userRoutes);
+app.use('/api/dashboard', userRoutes);
 app.use('/api/dashboard/', products);
 app.use('/api/dashboard/', insumos);
 app.use('/api/dashboard/', sales);
