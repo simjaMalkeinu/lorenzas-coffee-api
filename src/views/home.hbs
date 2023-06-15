@@ -1,0 +1,774 @@
+<section id="descargas" class="mb-5">
+  <h1><span class="badge bg-dark">DESCARGAS</span></h1>
+  <div class="row gap-3 justify-content-center">
+    <div class="card" style="width: 18rem;">
+      <img src="./imgs/frontend.webp" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h4 class="card-title"><span class="badge bg-info">FRONTEND</span></h4>
+        <p class="card-text text-wrap">Sistema a utilizar Lorenza's Coffee para
+          la parte del FRONTEND, esta parte interactua con el usuario</p>
+        <a href="https://github.com/simjaMalkeinu/Lorenzas-Coffee-UI.git" class="btn btn-primary" target="_blank">Ir a
+          github <i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <img src="./imgs/backend.webp" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h4 class="card-title"><span class="badge bg-info">BACKEND</span></h4>
+        <p class="card-text">Sistema a utilizar Lorenza's Coffee para la parte
+          del BACKEND, esta parte interactua con el FRONTEND</p>
+        <a href="https://github.com/simjaMalkeinu/lorenzas-coffee-api.git" class="btn btn-primary" target="_blank">Ir a
+          github <i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ConfiguracionBackend" class="mb-5">
+  <h1><span class="badge bg-dark">BACKEND CONFIGURACION</span></h1>
+  <div class="container">
+    <h5><span class="badge bg-warning">Configuracion</span></h5>
+    <p class="card-text">
+      dentro de la consola de nuestro Proyecto tecleamos el siguiente comando:
+    </p>
+    <pre>
+      <code>
+        npm instal
+      </code>
+    </pre>
+    <p class="card-text">
+      Se instalaran todas las dependencias asi como las de desarrollo
+    </p>
+
+    <p class="card-text">
+      Despues de descargar el proyecto, debes crear un archivo nuevo en la ruta
+      raiz del proyecto:
+    </p>
+
+    <p class="card-text">
+      El archivo se debe llamar .env.development
+    </p>
+    <pre>
+      <code>
+        |--> Proyecto 
+            |-->src 
+                  |-->public 
+                  |-->controllers 
+                  |-->models
+            |--> <strong>.env.development</strong>
+            |-->package-lock.json
+            |-->package.json
+      </code>
+    </pre>
+    <p class="card-text">
+      Dentro del archivo que acabamos de crear ponemos lo siguiente: cambiamos los valores por los nuestros
+    </p>
+    <pre>
+      <code>
+        PORT=<strong>"PUERTO DEL SISTEMA"</strong>
+        DB_HOST=<strong>"HOST"</strong>
+        DB_PORT=<strong>"PUERTO"</strong>
+        DB_USER=<strong>"USUARIO BASE DE DATOS"</strong>
+        DB_PASSWORD=<strong>"PASSWORD BASE DE DATOS"</strong>
+        DB_DATABASE=<strong>"NOMBRE BASE DE DATOS"</strong>
+      </code>
+    </pre>
+
+    <h5><span class="badge bg-success">Iniciar Proyecto</span></h5>
+    <p class="card-text">
+      Despues para iniciar el proyect en consola tecleamos el siguiente comando
+    </p>
+    <pre>
+      <code>
+        npm run dev
+      </code>
+    </pre>
+  </div>
+</section>
+
+<section id="ConfiguracionFrontend" class="mb-5">
+  <h1><span class="badge bg-dark">FRONTEND</span></h1>
+
+  <p class="card-text">
+    Despues de descargar el proyecto, necesitamos tener instalado un programa que nos haga como servidor, puede ser
+    XAMPP o MAMP o el que tu gustes
+    debe de contener APACHE y MYSQL o MARIADB
+  </p>
+  <p class="card-text">
+    Nos dirigimos a la carpete <strong>htdos</strong> y ponemos el proyecto en esa ruta
+  </p>
+  <pre>
+      <code>
+        |--> htdocs 
+            |-->proyecto 2 
+                  |-->public 
+                  |-->controllers 
+                  |-->models
+            |--> <strong>Lorenzas-Coffee-UI</strong>
+      </code>
+    </pre>
+
+  <p class="card-text">
+    En el Navegador tecleamos lo siguiente
+  </p>
+
+  <pre>
+        <code>
+          http://localhost/Lorenzas-Coffee-UI/
+        </code>
+      </pre>
+
+  <p class="card-text">
+    Nos debe de aparecer el sistema ya en linea
+  </p>
+
+  <div class="col-md-6 mx-auto">
+    <img src="./imgs/inicio.png" alt="inicio" srcset="" width="100%">
+  </div>
+
+</section>
+
+<section id="apiventas" class="mb-5">
+  <h1><span class="badge bg-dark">API VENTAS</span></h1>
+  <h5><span class="badge bg-success">PETICIONES GET</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/ventas
+    </code>
+  </pre>
+  <pre class="respuesta">
+    <code>
+      respuesta:
+        [
+          {
+              "idventa": 1,
+              "id_registro": 1,
+              "fecha": "2023-05-29T05:00:00.000Z",
+              "rfc_empleado": "PERSEVALE",
+              "operacion": "venta"
+          },
+          {
+              "idventa": 2,
+              "id_registro": 3,
+              "fecha": "2023-05-29T05:00:00.000Z",
+              "rfc_empleado": "PERSEVALE",
+              "operacion": "venta"
+          }
+        ]
+
+    </code>
+  </pre>
+
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/venta/<strong>:id</strong>
+    </code>
+  </pre>
+
+  <pre class="respuesta">
+    <code>
+      respuesta
+        {
+            "idventa": 1,
+            "fecha": "2023-05-29T00:00:00.000Z",
+            "id_registro": 1,
+            "operacion": "venta",
+            "productos": [
+                {
+                    "id_producto": 3,
+                    "nombre": "Paquete de donas",
+                    "costo": 35,
+                    "cantidad": 1
+                }
+            ],
+            "total": 75
+        }
+
+    </code>
+  </pre>
+  <h5><span class="badge bg-info">PETICIONES POST</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/venta
+    </code>
+  </pre>
+
+  <pre class="body">
+    <code>
+      body:
+        {
+            "rfc_usuario": "YORKACJI46Y79",
+            "id_operacion" : 2,
+            "fecha": "2023-06-14",
+            "total": 80,
+            "productos": [
+                {
+                    "id": 1,
+                    "cantidad": 2
+                },
+                {
+                    "id": 2,
+                    "cantidad": 2
+                }
+
+            ]
+        }
+
+    </code>
+  </pre>
+
+  <pre class="respuesta">
+      <code>
+        respuesta
+          {
+              "status": "created",
+              "message": "La venta se registro con exito, con el id -> 4 y el registro -> 6"
+          }
+  
+      </code>
+    </pre>
+  <h5><span class="badge bg-warning">PETICIONES PUT</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/venta/:id
+    </code>
+  </pre>
+
+  <pre class="body">
+    <code>
+      body
+        {
+            "rfc_usuario": "ALFOSASA46A79",
+            "id_registro": 1,
+            "fecha": "2023-06-15",
+            "total": 120,
+            "productos": [
+                {
+                    "id": 1,
+                    "cantidad": 3
+                },
+                {
+                    "id": 2,
+                    "cantidad": 3
+                }
+
+            ]
+        }
+
+    </code>
+  </pre>
+  <h5><span class="badge bg-danger">PETICIONES DELETE</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/venta/:id
+    </code>
+  </pre>
+
+  <pre class="body">
+    <code>
+      body:
+        {
+            "id" : 3,
+            "id_registro": 5
+        }
+
+    </code>
+  </pre>
+  <p class="card-text">
+
+  </p>
+</section>
+
+<section id="apiproductos" class="mb-5">
+  <h1><span class="badge bg-dark">API PRODUCTOS</span></h1>
+  <h5><span class="badge bg-success">PETICIONES GET</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/products
+    </code>
+  </pre>
+  <pre class="respuesta">
+    <code>
+      respuesta:
+        [
+            {
+                "id_producto": 1,
+                "nombre": "Cafe americano",
+                "cantidad": 15,
+                "caducidad": "2023-06-30T05:00:00.000Z",
+                "costo": 15,
+                "precio_venta": 35,
+                "unidad": "tazas",
+                "canmin": 0
+            },
+            {
+                "id_producto": 2,
+                "nombre": "Cafe con leche",
+                "cantidad": 15,
+                "caducidad": "2023-06-30T05:00:00.000Z",
+                "costo": 25,
+                "precio_venta": 40,
+                "unidad": "tazas",
+                "canmin": 2
+            },
+            
+        ]
+    </code>
+  </pre>
+  <h5><span class="badge bg-info">PETICIONES POST</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/product/:id
+    </code>
+  </pre>
+  <pre class="respuesta">
+    <code>
+      respuesta:
+        {
+            "nombre": "Cafe americano",
+            "cantidad": 15,
+            "caducidad": "2023-06-30T05:00:00.000Z",
+            "canmin": 0,
+            "costo": 15,
+            "precio_venta": 35,
+            "unidad": "tazas",
+            "insumos": [
+                {
+                    "id_insumo": 3,
+                    "cantidad": 0.2
+                },
+                {
+                    "id_insumo": 2,
+                    "cantidad": 0.05
+                },
+                {
+                    "id_insumo": 4,
+                    "cantidad": 0.01
+                }
+            ]
+        }
+    </code>
+  </pre>
+  <h5><span class="badge bg-warning">PETICIONES PUT</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/product/:id
+    </code>
+  </pre>
+  <pre class="body">
+    <code>
+      body:
+        {
+            "nombre": "Cafe americano",
+            "cantidad": 15,
+            "caducidad": "2023-06-30",
+            "canmin": 0,
+            "costo": 15,
+            "precio_venta": 35,
+            "unidad": "tazas",
+            "insumos": [
+                {
+                    "id_insumo": 3,
+                    "cantidad": 0.2
+                },
+                {
+                    "id_insumo": 2,
+                    "cantidad": 0.05
+                },
+                {
+                    "id_insumo": 4,
+                    "cantidad": 0.01
+                }
+            ]
+        }
+    </code>
+  </pre>
+  <h5><span class="badge bg-danger">PETICIONES DELETE</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/product/:id
+    </code>
+  </pre>
+
+  <pre class="respuesta">
+    <code>
+      respuesta 
+        {
+          status: ""
+          message: ""
+        }
+    </code>
+  </pre>
+</section>
+
+<section id="apiinsumos" class="mb-5">
+  <h1><span class="badge bg-dark">API INSUMOS</span></h1>
+  <h5><span class="badge bg-success">PETICIONES GET</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/insumos
+    </code>
+  </pre>
+  <pre class="respuesta">
+    <code>
+      respuesta
+        [
+            {
+                "id_insumo": 1,
+                "nombre": "cafe",
+                "costo": 100,
+                "cantidad": 30,
+                "caducidad": "2023-06-30T05:00:00.000Z",
+                "unidad": "capsulas",
+                "canmin": 20
+            },
+            {
+                "id_insumo": 2,
+                "nombre": "leche",
+                "costo": 100,
+                "cantidad": 10,
+                "caducidad": "2023-06-30T05:00:00.000Z",
+                "unidad": "capsulas",
+                "canmin": 2
+            },
+        ]
+    </code>
+  </pre>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/insumo/:id
+    </code>
+  </pre>
+  <pre class="respuesta">
+    <code>
+      respuesta: 
+        {
+            "id_insumo": 2,
+            "nombre": "leche",
+            "costo": 100,
+            "cantidad": 10,
+            "caducidad": "2023-06-30T05:00:00.000Z",
+            "unidad": "capsulas",
+            "canmin": 2
+        }
+    </code>
+  </pre>
+  <h5><span class="badge bg-info">PETICIONES POST</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/insumo
+    </code>
+  </pre>
+  <pre class="body">
+    <code>
+      body: 
+        {
+            "id_insumo": 2,
+            "nombre": "leche",
+            "costo": 100,
+            "cantidad": 10,
+            "caducidad": "2023-06-30",
+            "unidad": "capsulas",
+            "canmin": 2
+        }
+    </code>
+  </pre>
+  <h5><span class="badge bg-warning">PETICIONES PUT</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/insumo/:id
+    </code>
+  </pre>
+  <pre class="body">
+    <code>
+      body: 
+        {
+            "id_insumo": 2,
+            "nombre": "leche",
+            "costo": 100,
+            "cantidad": 10,
+            "caducidad": "2023-06-30",
+            "unidad": "capsulas",
+            "canmin": 2
+        }
+    </code>
+  </pre>
+  <h5><span class="badge bg-danger">PETICIONES DELETE</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/insumo/:id
+    </code>
+  </pre>
+  <pre class="respuesta">
+    <code>
+      respuesta 
+        {
+          status: ""
+          message: ""
+        }
+    </code>
+  </pre>
+</section>
+
+<section id="apireportes" class="mb-5">
+  <h1><span class="badge bg-dark">API REPORTES</span></h1>
+  <h5><span class="badge bg-success">PETICIONES GET</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/reportes
+    </code>
+  </pre>
+
+  <pre class="respuesta">
+    <code>
+      respuesta
+        [
+            {
+                "id_registro": 1,
+                "rfc_empleado": "ALFOSASA46A79",
+                "id_operacion": 1,
+                "operacion": "compra"
+            },
+            {
+                "id_registro": 2,
+                "rfc_empleado": "SIMJA",
+                "id_operacion": 1,
+                "operacion": "compra"
+            },
+        ]
+
+    </code>
+  </pre>
+
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/reporte<strong>/:id/:operacion</strong>
+    </code>
+  </pre>
+
+  <pre class="respuesta">
+    <code>
+      respuesta:
+        {
+            "id_registro": 1,
+            "rfc_empleado": "ALFOSASA46A79",
+            "id_operacion": 1,
+            "operacion": "compra",
+            "id_orden_compra": 1,
+            "id_proveedor": 1,
+            "total": 30,
+            "nombre": "Nescafe",
+            "telefono": "55-1234 5678",
+            "correo": "Nescafe@proveedor.com",
+            "productos": [],
+            "insumos": [
+                {
+                    "id_insumo": 1,
+                    "nombre": "cafe",
+                    "cantidad_insumo": 5
+                }
+            ]
+        }
+
+    </code>
+  </pre>
+</section>
+
+<section id="apiordenescompra" class="mb-5">
+  <h1><span class="badge bg-dark">API ORDENES DE COMPRA</span></h1>
+  <h5><span class="badge bg-success">PETICIONES GET</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/ordenes
+    </code>
+  </pre>
+  <pre class="respuesta">
+    <code>
+      respuesta
+        [
+            {
+                "id_orden_compra": 1,
+                "estado": "pendiente",
+                "rfc_empleado": "ALFOSASA46A79",
+                "nombre": "Nescafe",
+                "total": 30
+            },
+            {
+                "id_orden_compra": 2,
+                "estado": "pendiente",
+                "rfc_empleado": "ALFOSASA46A79",
+                "nombre": "Nescafe",
+                "total": 150
+            }
+        ]
+
+    </code>
+  </pre>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/orden<strong>/:id</strong>
+    </code>
+  </pre>
+  <pre class="respuesta">
+    <code>
+      respuesta
+        {
+            "id_orden_compra": 2,
+            "estado": "pendiente",
+            "rfc_empleado": "ALFOSASA46A79",
+            "nombre": "Nescafe",
+            "total": 150,
+            "productos": [
+                {
+                    "id_producto": 3,
+                    "nombre": "Paquete de donas",
+                    "cantidad_producto": 5
+                }
+            ],
+            "insumos": [
+                {
+                    "id_insumo": 1,
+                    "nombre": "cafe",
+                    "cantidad_insumo": 2
+                }
+            ]
+        }
+    </code>
+  </pre>
+  <h5><span class="badge bg-info">PETICIONES POST</span></h5>
+  <pre>
+    <code>
+      <strong>PENDIENTE</strong>
+      ruta:
+        http://localhost:3000/api/dashboard/orden
+    </code>
+  </pre>
+  <h5><span class="badge bg-warning">PETICIONES PUT</span></h5>
+  <pre>
+    <code>
+      <strong>PENDIENTE</strong>
+      ruta:
+        http://localhost:3000/api/dashboard/orden<strong>/:id</strong>
+    </code>
+  </pre>
+  <h5><span class="badge bg-danger">PETICIONES DELETE</span></h5>
+  <pre>
+    <code>
+      <strong>PENDIENTE</strong>
+      ruta:
+        http://localhost:3000/api/dashboard/orden
+    </code>
+  </pre>
+</section>
+
+<section id="apiusuarios" class="mb-5">
+  <h1><span class="badge bg-dark">API USUARIOS</span></h1>
+  <h5><span class="badge bg-success">PETICIONES GET</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/users
+    </code>
+  </pre>
+
+  <pre class="respuesta">
+    <code>
+      respuesta:
+        [
+            {
+                "rfc": "YORKACJI46Y79",
+                "correo": "yorkam@lorenzascoffee.com",
+                "nombre": "York-am Acua Jimenez",
+                "password": "$2a$10$UaFW87pugBLIIEVLXsz/9.thz8vbBht/NNwFqYkxcf9CL91.UZH1W",
+                "tipo": "administrador",
+                "desc": "puede acceder a todas las funciones del sistema"
+            },
+            {
+                "rfc": "MELIBUVA46M79",
+                "correo": "melissa@lorenzascoffee.com",
+                "nombre": "Melissa Mónica Bustamante Valderrabano",
+                "password": "$2a$10$c6p3wPHfbwZ.MN26ZomsmOC3u7uUgd4.ZPz9y58WPP5HPvXniIjGS",
+                "tipo": "administrador",
+                "desc": "puede acceder a todas las funciones del sistema"
+            },
+        ]
+    </code>
+  </pre>
+
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/user<strong>/:rfc</strong>
+    </code>
+  </pre>
+
+  <pre class="respuesta">
+    <code>
+      respuesta:
+        {
+            "rfc": "YORKACJI46Y79",
+            "correo": "yorkam@lorenzascoffee.com",
+            "nombre": "York-am Acua Jimenez",
+            "password": "$2a$10$UaFW87pugBLIIEVLXsz/9.thz8vbBht/NNwFqYkxcf9CL91.UZH1W",
+            "tipo": "administrador",
+            "desc": "puede acceder a todas las funciones del sistema"
+        }
+    </code>
+  </pre>
+  <h5><span class="badge bg-info">PETICIONES POST</span></h5>
+  <pre>
+    <code>
+      ruta:
+        http://localhost:3000/api/dashboard/user
+    </code>
+  </pre>
+
+  <pre class="body">
+    <code>
+      body:
+        {
+            "rfc": "ALFOSASA46A79",
+            "correo": "alfonso@lorenzascoffee.com",
+            "nombre": "Alfonso",
+            "apellido_paterno": "Salgado",
+            "apellido_materno": "Sandoval",
+            "password": "admin45678",
+            "tipo": 1
+        }
+    </code>
+  </pre>
+  <h5><span class="badge bg-warning">PETICIONES PUT</span></h5>
+  <pre>
+    <code>
+      <strong>PENDIENTE</strong>
+      ruta:
+        http://localhost:3000/api/dashboard/user<strong>/:rfc</strong>
+    </code>
+  </pre>
+  <h5><span class="badge bg-danger">PETICIONES DELETE</span></h5>
+  <pre>
+    <code>
+      <strong>PENDIENTE</strong>
+      ruta:
+        http://localhost:3000/api/dashboard/user<strong>/:rfc</strong>
+    </code>
+  </pre>
+</section>

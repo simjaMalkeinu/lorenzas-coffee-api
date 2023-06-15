@@ -3,7 +3,7 @@ import {Router} from 'express'
 const router = Router();
 
 router.get('/', (req, res) => {
-    res.send("API FOR LORENZA'S COFFEE SYSTEM")
+    res.render('home')
 })
 
 router.get('/creator', (req, res) => {

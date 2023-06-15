@@ -1,0 +1,185 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: 'Signika Negative', sans-serif;
+}
+
+pre{
+  background-color: #e7e7e7;
+  color: #2c3e50;
+  font-size: 1.2rem;
+  max-height: 300px;
+  letter-spacing: 2px;
+
+}
+
+pre.respuesta{
+  background-color: #2c3e50;
+  color: white;
+  letter-spacing: 2px;
+}
+
+pre.body{
+  background-color: #2dc5c5;
+  color: white;
+  letter-spacing: 2px;
+}
+
+code {
+  font-family: 'Anek Latin', sans-serif;
+  font-size: 40px;
+}
+
+.scroll,
+pre {
+  overflow: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.scroll::-webkit-scrollbar,
+pre::-webkit-scrollbar {
+  width: 12px;
+  padding:0 1em;
+}
+
+.scroll::-webkit-scrollbar-thumb,
+pre::-webkit-scrollbar-thumb {
+  width: 8px;
+  background-color: #2c3e50;
+}
+
+
+pre.respuesta {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+pre.respuesta::-webkit-scrollbar {
+  width: 12px;
+  padding:0 1em;
+}
+
+pre.respuesta::-webkit-scrollbar-thumb {
+  width: 8px;
+  background-color: #2dc5c5;
+}
+
+.navigation {
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  color: #2e302f;
+  align-items: start;
+  display: grid;
+  grid-template-rows: 100px auto;
+}
+
+.navigation a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.navigation nav {
+  display: grid;
+  align-items: start;
+  height: 100%;
+}
+
+.navigation nav ul {
+  padding: 0 0.5em;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 0.5em;
+}
+
+.navigation nav ul li {
+  text-decoration: none;
+  list-style: none;
+  transition: all ease 300ms;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.navigation nav ul li a,
+.navigation nav ul li.inv {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 0.5em;
+  padding: 1em 0 1em 1.5em;
+  font-size: 14px;
+  margin: 5px 0;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.navigation nav ul li:hover {
+  background-color: white;
+  color: #2c3e50;
+}
+.navigation nav ul li:hover a {
+  color: #2c3e50;
+}
+
+.navigation nav ul li i {
+  font-size: 22px;
+  margin: 0 auto;
+}
+
+.navigation nav ul li p {
+  margin: auto 0;
+}
+
+container{
+  height: 100vh;
+}
+
+
+#inicio{
+  height: 50vh;
+  background-image: url(../imgs/fondocafeteria.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: 150%;
+  background-attachment: fixed;
+}
+
+#inicio h1{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0000005e;
+  color: white;
+}
+
+footer{
+  margin-top: 5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.integrantes{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+}
+
+.integrantes li{
+  text-decoration: none;
+  list-style: none;
+  text-align: center;
+}
