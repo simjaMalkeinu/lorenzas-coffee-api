@@ -8,6 +8,7 @@ import userRoutes from './routes/User.routes.js'
 import products from './routes/Products.routes.js'
 import insumos from './routes/Insumos.routes.js'
 import sales from './routes/Sales.routes.js'
+import reports from './routes/Reports.routes.js'
 
 // Initializations
 const app = express()
@@ -25,6 +26,7 @@ app.use('/api/', userRoutes);
 app.use('/api/dashboard/', products);
 app.use('/api/dashboard/', insumos);
 app.use('/api/dashboard/', sales);
+app.use('/api/dashboard/', reports);
 
 
 app.use((req, res, next) => {
