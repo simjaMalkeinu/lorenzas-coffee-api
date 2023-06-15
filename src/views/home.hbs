@@ -530,28 +530,62 @@
   <pre>
     <code>
       ruta:
-        http://localhost:3000/api/dashboard/
+        http://localhost:3000/api/dashboard/reportes
     </code>
   </pre>
-  <h5><span class="badge bg-info">PETICIONES POST</span></h5>
+
+  <pre class="respuesta">
+    <code>
+      respuesta
+        [
+            {
+                "id_registro": 1,
+                "rfc_empleado": "ALFOSASA46A79",
+                "id_operacion": 1,
+                "operacion": "compra"
+            },
+            {
+                "id_registro": 2,
+                "rfc_empleado": "SIMJA",
+                "id_operacion": 1,
+                "operacion": "compra"
+            },
+        ]
+
+    </code>
+  </pre>
+
   <pre>
     <code>
       ruta:
-        http://localhost:3000/api/dashboard/
+        http://localhost:3000/api/dashboard/reporte<strong>/:id/:operacion</strong>
     </code>
   </pre>
-  <h5><span class="badge bg-warning">PETICIONES PUT</span></h5>
-  <pre>
+
+  <pre class="respuesta">
     <code>
-      ruta:
-        http://localhost:3000/api/dashboard/
-    </code>
-  </pre>
-  <h5><span class="badge bg-danger">PETICIONES DELETE</span></h5>
-  <pre>
-    <code>
-      ruta:
-        http://localhost:3000/api/dashboard/
+      respuesta:
+        {
+            "id_registro": 1,
+            "rfc_empleado": "ALFOSASA46A79",
+            "id_operacion": 1,
+            "operacion": "compra",
+            "id_orden_compra": 1,
+            "id_proveedor": 1,
+            "total": 30,
+            "nombre": "Nescafe",
+            "telefono": "55-1234 5678",
+            "correo": "Nescafe@proveedor.com",
+            "productos": [],
+            "insumos": [
+                {
+                    "id_insumo": 1,
+                    "nombre": "cafe",
+                    "cantidad_insumo": 5
+                }
+            ]
+        }
+
     </code>
   </pre>
 </section>
